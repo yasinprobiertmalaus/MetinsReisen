@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mein Konto</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+
+    <div id="side-menu" class="side-menu">
+        <button class="close-btn">&times;</button>
+        <div class="menu-content">
+            <a href="index.html" class="menu-item">Home</a>
+            <a href="katalog.html" class="menu-item">Erlebnisse (Katalog)</a>
+            <a href="testimonials.html" class="menu-item">Erfahrungsberichte</a>
+            <a href="ueber_uns.html" class="menu-item">Über uns</a>
+            <hr>
+            <a href="mein_konto.html" class="menu-item active" id="auth-link">Mein Konto (Logout)</a>
+        </div>
+    </div>
+
+    <header>
+        <button id="menu-toggle" class="menu-toggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        <h1><a href="index.html" class="home-link">Ihr Logo & Name</a></h1>
+    </header>
+
+    <main class="page-content account-page">
+        <h2 class="section-title">Willkommen, <span id="user-name">Kunde</span>!</h2>
+        
+        <div class="account-grid">
+            <div class="account-section">
+                <h3>Meine Anmeldedaten</h3>
+                <div class="info-group">
+                    <strong>Name:</strong> <span id="display-name">Mustermann Max</span>
+                </div>
+                <div class="info-group">
+                    <strong>E-Mail:</strong> <span id="display-email">max.mustermann@web.de</span>
+                </div>
+                <button class="edit-button">Daten bearbeiten</button>
+                <button class="auth-button logout-button">Logout</button>
+            </div>
+
+            <div class="account-section">
+                <h3>Vergangene Buchungen</h3>
+                <table id="booking-table">
+                    <thead>
+                        <tr>
+                            <th>Reise</th>
+                            <th>Datum</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        </tbody>
+                </table>
+                <p id="no-bookings" class="hidden">Es wurden noch keine Reisen gebucht.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Ihr Unternehmen. Alle Rechte vorbehalten.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

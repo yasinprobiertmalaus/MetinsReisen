@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Registrierung</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+
+    <div id="side-menu" class="side-menu">
+        <button class="close-btn">&times;</button>
+        <div class="menu-content">
+            <a href="index.html" class="menu-item">Home</a>
+            <a href="katalog.html" class="menu-item">Erlebnisse (Katalog)</a>
+            <a href="testimonials.html" class="menu-item">Erfahrungsberichte</a>
+            <a href="ueber_uns.html" class="menu-item">Über uns</a>
+            <hr>
+            <a href="auth.html" class="menu-item active" id="auth-link">Registrierung / Login</a>
+        </div>
+    </div>
+
+    <header>
+        <button id="menu-toggle" class="menu-toggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        <h1><a href="index.html" class="home-link">Ihr Logo & Name</a></h1>
+    </header>
+
+    <main class="page-content auth-page">
+        <h2 class="section-title">Ihr Kundenbereich</h2>
+        
+        <div class="auth-container">
+            <div id="login-section" class="auth-box">
+                <h3>Anmelden</h3>
+                <form id="login-form">
+                    <label for="login-email">E-Mail-Adresse</label>
+                    <input type="email" id="login-email" required>
+                    
+                    <label for="login-password">Passwort</label>
+                    <input type="password" id="login-password" required>
+                    
+                    <button type="submit" class="auth-button">Anmelden</button>
+                    
+                    <p class="switch-mode">Noch kein Konto? <a href="#" onclick="showRegister(event)">Hier registrieren.</a></p>
+                </form>
+            </div>
+
+            <div id="register-section" class="auth-box hidden">
+                <h3>Neu registrieren</h3>
+                <form id="register-form">
+                    <label for="reg-name">Vollständiger Name</label>
+                    <input type="text" id="reg-name" required>
+
+                    <label for="reg-email">E-Mail-Adresse</label>
+                    <input type="email" id="reg-email" required>
+                    
+                    <label for="reg-password">Passwort</label>
+                    <input type="password" id="reg-password" required>
+                    
+                    <button type="submit" class="auth-button register-btn">Registrieren</button>
+                    
+                    <p class="switch-mode">Bereits registriert? <a href="#" onclick="showLogin(event)">Zur Anmeldung.</a></p>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Ihr Unternehmen. Alle Rechte vorbehalten.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
